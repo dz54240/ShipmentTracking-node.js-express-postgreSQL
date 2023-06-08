@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/trackingU.css" />
+    <title>Shipment tracking</title>
+  </head>
+  <body>
+    <h1>Orders and products info page</h1>
+    <br />
+
+    <form action="/shipmentTracking" method="POST">
+      <div class="container">
+        <p>Enter product tracking ID:</p>
+        <p>
+          <input
+            type="text"
+            placeholder="#trackingID"
+            id="text"
+            name="TrackingID"
+            pattern="[0-9]+(\.[0-9]+)?" />
+        </p>
+        <button class="submit" type="submit">Search</button>
+      </div>
+    </form>
+
+    <br />
+    <br />
+    <div class="container2">
+      <p>Click to see all shiping products</p>
+      <button class="submit" id="shipmentDetails" type="submit">
+        Shipments details
+      </button>
+    </div>
+    <br />
+    <br />
+    <div class="container2">
+      <p>Click to display available products</p>
+      <button class="submit" id="availableProducts" type="submit">
+        Available products
+      </button>
+    </div>
+    <br /><br />
+    <div class="container2">
+      <p>Click to add a new product</p>
+      <button class="submit" id="newProduct" type="submit">New product</button>
+    </div>
+    <br />
+    <br />
+
+    <form action="/products/delete" method="POST">
+      <div class="container">
+        <p>Remove product with ID:</p>
+        <p>
+          <input
+            id="deleteID"
+            type="text"
+            placeholder="#productID"
+            name="productID"
+            pattern="[0-9]+(\.[0-9]+)?" />
+        </p>
+        <button id="remove" class="submit" type="submit">Remove</button>
+      </div>
+    </form>
+
+    <script src="/scripts/scriptAdmin.js"></script>
+  </body>
+</html>

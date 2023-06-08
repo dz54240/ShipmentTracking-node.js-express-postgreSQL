@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/trackingU.css" />
+    <title>Shipment tracking</title>
+  </head>
+  <body>
+    <h1>Track your shipment</h1>
+    <form action="/shipmentTracking" method="POST">
+      <div class="container">
+        <p>Enter product tracking ID:</p>
+        <p>
+          <input
+            type="text"
+            placeholder="#11111"
+            id="text"
+            name="TrackingID"
+            pattern="[0-9]+(\.[0-9]+)?" />
+        </p>
+        <button class="submit" type="submit">Search</button>
+      </div>
+    </form>
+    <br />
+    <br />
+    <div class="container2">
+      <p>Click to display available products</p>
+      <button class="submit" id="availableProducts" type="submit">
+        Available products
+      </button>
+    </div>
+    <script src="/scripts/scriptUser.js"></script>
+  </body>
+</html>
